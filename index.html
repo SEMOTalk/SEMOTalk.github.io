@@ -1,1 +1,179 @@
-SEMOTalk demo page...
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <!--
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  -->
+
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <!--
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  -->
+
+  <!--
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  -->
+
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <!--
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  -->
+
+  <!-- Keywords for your paper to be indexed by-->
+  <!--
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  -->
+
+  <title>SEMOTalk: Sync-Emotion Multi-Objective 3D Face Generation with Human Feedback</title>
+  <link rel="icon" type="image/x-icon" href="static/images/ecoface.ico"> <!-- 网页小标签图片-->>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <!-- <h1 class="title is-1 publication-title">ICLR 2025</h1> -->
+            <h1 class="title is-1 publication-title">SEMOTalk: Sync-Emotion Multi-Objective 3D Face Generation with Human Feedback</h1>
+            <!--Author list-->
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Paper abstract -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            The widespread adoption of 3D facial avatars relies on their ease of generation, realism, and vivid expressiveness. 
+            Despite substantial progress in lip synchronization and emotional controllability, existing 3D facial animation 
+            methods still exhibit limitations in generation diversity, precise control of emotional expressions, and alignment 
+            with subjective user preferences. These shortcomings significantly restrict broader adoption and practical 
+            applicability. To address these challenges, we propose SEMOTalk, a novel framework for 3D facial animation that 
+            simultaneously optimizes lip synchronization and emotional expressiveness. SEMOTalk leverages a flow matching 
+            framework with a Mixture-of-Experts (MoE) mechanism to capture temporal dynamics and enhance diversity. To overcome 
+            the scarcity of high-quality emotional data, we propose a two-stage curriculum learning strategy: first, pretraining 
+            on large-scale in-the-wild datasets, followed by fine-tuning on high-quality emotional datasets. Furthermore, we 
+            present a human feedback-in-loop strategy, which is the first attempt to incorporate human feedback into the 
+            audio-to-vertices task, directly optimizing model outputs to align with subjective user preferences. Extensive 
+            experiments demonstrate that SEMOTalk significantly outperforms existing methods in terms of lip synchronization 
+            accuracy, naturalness of emotional expression, and subjective user evaluations.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Paper method -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Proposed Method</h2>
+        <div class="content has-text-justified">
+          <img src="static/images/fig1.png" alt="semotalk">
+          <p>
+            <br>
+            Overview of SEMOTalk. (a) illustrates the inference pipeline of SEMOTalk. Given a human identity, 
+            driving audio, and an emotion condition, the MoE-DiT module performs iterative denoising via an 
+            ODE solver. (b) provides a detailed view of the MoE-DiT architecture, where emotional information 
+            is injected through adaptive RMSNorm, and the MoE mechanism models the spatiotemporal dynamics of
+            facial movements.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper method -->
+
+<!-- demo 1 video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!--<div class="content has-text-justified">
+        <p>
+          To show the overall performance of <b><u>EcoFace</u></b>, in the following video, we provide demos of <u><b>10 unseen identities</b></u> driven by <b><u>6 audio clips from various languages</u></b>.
+        </p>
+      </div>-->
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/demo.mp4"
+        type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+<!-- End demo 1 video -->
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p style="text-align:center">
+            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p style="text-align:center">
+            Website source code based on the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> project page.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
